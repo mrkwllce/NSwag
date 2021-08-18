@@ -354,5 +354,12 @@ namespace NSwag.Commands.CodeGeneration
             get { return Settings.CSharpGeneratorSettings.GenerateNullableReferenceTypes; }
             set { Settings.CSharpGeneratorSettings.GenerateNullableReferenceTypes = value; }
         }
+
+        [Argument(Name = "PropertyNamingStyle", Description = "The naming style for properties that are generated.", IsRequired = false)]
+        public CSharpNamingStyle PropertyNamingStyle
+        {
+            get => Settings.PropertyNamingStyle;
+            set => Settings.PropertyNamingStyle = value;
+        }
     }
 }
