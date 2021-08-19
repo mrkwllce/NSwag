@@ -358,8 +358,15 @@ namespace NSwag.Commands.CodeGeneration
         [Argument(Name = "PropertyNamingStyle", Description = "The naming style for properties that are generated.", IsRequired = false)]
         public CSharpNamingStyle PropertyNamingStyle
         {
-            get => Settings.PropertyNamingStyle;
-            set => Settings.PropertyNamingStyle = value;
+            get => Settings.CSharpGeneratorSettings.PropertyNamingStyle;
+            set => Settings.CSharpGeneratorSettings.PropertyNamingStyle = value;
+        }
+
+        [Argument(Name = "ClassNamingStyle", Description = "The naming style for classes that are generated.", IsRequired = false)]
+        public CSharpNamingStyle ClassNamingStyle
+        {
+            get => Settings.CSharpGeneratorSettings.ClassNamingStyle;
+            set => Settings.CSharpGeneratorSettings.ClassNamingStyle = value;
         }
     }
 }
